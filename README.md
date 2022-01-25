@@ -1,2 +1,4 @@
 # erlCURL
-an erlang driver for libcurl
+An erlang driver for libcurl
+
+* still work-in-progress.
