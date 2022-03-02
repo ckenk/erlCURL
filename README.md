@@ -1,4 +1,4 @@
 # erlCURL
-An erlang driver for libcurl
+A C++ erlang driver for libcurl library.
 
-* still work-in-progress.
+* work-in-progress.
