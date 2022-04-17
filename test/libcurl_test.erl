@@ -20,17 +20,17 @@
 
 %% API Functions
 curl() ->	
-	JSONBin = "{\"modules\":{\"BCM\":[{\"error\":\"B1609-15\"}],\"PCM\":[{\"error\":\"P1302-00\"}]},\"meta\":{\"user_id\":\"MCDA_RH\"},\"vin\":\"123456789abcdef37\",\"test_type\":\"beta\"}",
-	Options = [
+	JSON = "{\"modules\":{\"MODULE1\":[{\"error\":\"B1609-15\"}],\"MODULE2\":[{\"error\":\"P1302-00\"}]},\"meta\":{\"user_id\":\"SOMEONE\"},\"vin\":\"123456789abcdef37\",\"test_type\":\"beta\"}",
+	Request = [
 			   {erl_drv_debug,"false"}
 			   ,{erl_drv_log, "C:/temp/curl_drv.log"}
 			   ,{method,"POST"}
-			   ,{header,"Authorization:Bearer b32118c0364411eaa06f0242ac110005"}
+			   ,{header,"Authorization:Bearer sometoken364411eca06f0242ac110005"}
 			   ,{header,"Content-Type: application/json"}
-			   ,{body_data,JSONBin}
+			   ,{body_data,JSON}
 			   ,{verbose,"-v"}
 			  ],
-	curl(<some_uri>, Options).
+	curl(<some_uri>, Request).
 
 
 curl(Url, Options) ->
